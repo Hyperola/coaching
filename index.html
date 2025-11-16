@@ -21,6 +21,9 @@
         <li><a href="#resources">Resources</a></li>
         <li><a href="#" class="book-consultation-btn">Book Session</a></li>
       </ul>
+      <div class="mobile-booking">
+        <a href="#" class="book-consultation-btn mobile-book-btn">Book Session</a>
+      </div>
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -348,25 +351,28 @@
       </div>
     </div>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#" class="book-consultation-btn">Book Session</a></li>
-      </ul>
-    </div>
+    <!-- Quick Links and Contact Side by Side on Mobile -->
+    <div class="footer-links-contact">
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#" class="book-consultation-btn">Book Session</a></li>
+        </ul>
+      </div>
 
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <ul>
-        <li><i class="far fa-envelope"></i> tessy@coachingdifferently.com</li>
-        <li><i class="fas fa-phone"></i> +65 9469 2243</li>
-        <li><i class="fab fa-instagram"></i> @coachingdifferently</li>
-      </ul>
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="far fa-envelope"></i> tessy@coachingdifferently.com</li>
+          <li><i class="fas fa-phone"></i> +65 9469 2243</li>
+          <li><i class="fab fa-instagram"></i> @coachingdifferently</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -385,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   const navItems = document.querySelectorAll('.nav-links a');
+  const mobileBookBtn = document.querySelector('.mobile-book-btn');
   
   // Toggle mobile menu
   hamburger.addEventListener('click', function() {
