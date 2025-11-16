@@ -127,7 +127,7 @@ body {
 .hero {
     width: 100%;
     min-height: 100vh;
-    background: url('images.jpg') center/cover no-repeat;
+    background: url('images.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,7 +141,7 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(97, 96, 96, 0.7);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(1px);
 }
 
 .hero-content {
@@ -225,6 +225,7 @@ body {
     color: #111;
     font-weight: 900;
     margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
 .about-text p {
@@ -1238,6 +1239,14 @@ textarea {
         height: 30px;
     }
 }
+
+.logos-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
 
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
