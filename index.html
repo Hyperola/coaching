@@ -317,31 +317,35 @@
 <!-- ===== Booking Popup Modal ===== -->
 <div id="bookingModal" class="modal">
   <div class="modal-content">
-    <span class="close-modal">&times;</span>
+    <div class="modal-header">
+      <h2>Book Your Session</h2>
+      <span class="close-modal">&times;</span>
+    </div>
+    
     <div class="booking-container">
       <div class="session-options">
-          <h2>Session Options</h2>
+          <h3>Session Options</h3>
 
-          <div class="option-card">
-              <h3>Free Consultation</h3>
+          <div class="option-card" data-session="consultation">
+              <h4>Free Consultation</h4>
               <p>30-minute discovery call</p>
               <span class="price">Free</span>
           </div>
 
-          <div class="option-card">
-              <h3>Single Session</h3>
+          <div class="option-card" data-session="single">
+              <h4>Single Session</h4>
               <p>60-minute coaching session</p>
               <span class="price">Free</span>
           </div>
 
-          <div class="option-card">
-              <h3>Package Deal</h3>
+          <div class="option-card" data-session="package">
+              <h4>Package Deal</h4>
               <p>4 sessions (save 20%)</p>
               <span class="price">$480</span>
           </div>
 
           <div class="expect">
-              <h3>What to Expect</h3>
+              <h4>What to Expect</h4>
               <ul>
                   <li>✔ Personalized assessment</li>
                   <li>✔ Goal setting & planning</li>
@@ -352,97 +356,120 @@
       </div>
 
       <form class="booking-form">
-          <div class="form-row">
-              <div class="form-group">
-                  <label>Full Name *</label>
-                  <input type="text" placeholder="Enter your full name" required>
-              </div>
+          <div class="form-section">
+            <h4>Personal Information</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
 
-              <div class="form-group">
-                  <label>Email Address *</label>
-                  <input type="email" placeholder="your@email.com" required>
-              </div>
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" placeholder="(555) 123-4567" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Session Type *</label>
+                    <select class="session-type" required>
+                        <option value="">Select session type</option>
+                        <option value="consultation">Free Consultation</option>
+                        <option value="single">Single Session</option>
+                        <option value="package">Package Deal</option>
+                    </select>
+                </div>
+            </div>
           </div>
 
-          <div class="form-row">
-              <div class="form-group">
-                  <label>Phone Number *</label>
-                  <input type="text" placeholder="(555) 123-4567" required>
-              </div>
+          <div class="form-section">
+            <h4>Schedule Your Session</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Preferred Date *</label>
+                    <input type="date" required class="date-input">
+                </div>
 
-              <div class="form-group">
-                  <label>Session Type *</label>
-                  <select required>
-                      <option value="">Select session type</option>
-                      <option>Free Consultation</option>
-                      <option>Single Session</option>
-                      <option>Package Deal</option>
-                  </select>
-              </div>
+                <div class="form-group">
+                    <label>Preferred Time *</label>
+                    <select required class="time-select">
+                        <option value="">Select time</option>
+                        <option>8:00 AM</option>
+                        <option>10:00 AM</option>
+                        <option>1:00 PM</option>
+                        <option>3:00 PM</option>
+                        <option>5:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Timezone *</label>
+                    <select required class="timezone-select">
+                        <option value="">Select timezone</option>
+                        <option>GMT (Greenwich Mean Time)</option>
+                        <option>WAT (West Africa Time)</option>
+                        <option>EST (Eastern Standard Time)</option>
+                        <option>CST (Central Standard Time)</option>
+                        <option>PST (Pacific Standard Time)</option>
+                    </select>
+                </div>
+            </div>
           </div>
 
-          <div class="form-row">
-              <div class="form-group">
-                  <label>Preferred Date *</label>
-                  <input type="date" required>
-              </div>
+          <div class="form-section">
+            <h4>Your Goals & Experience</h4>
+            <div class="form-group full">
+                <label>What are your main goals for coaching? *</label>
+                <textarea maxlength="500" placeholder="Tell us what you'd like to achieve (e.g., career growth, confidence building, relationship improvement)..." required class="goals-textarea"></textarea>
+                <div class="char-count"><span>0</span>/500 characters</div>
+            </div>
 
-              <div class="form-group">
-                  <label>Preferred Time *</label>
-                  <select required>
-                      <option value="">Select time</option>
-                      <option>8:00 AM</option>
-                      <option>10:00 AM</option>
-                      <option>1:00 PM</option>
-                      <option>3:00 PM</option>
-                  </select>
-              </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Previous coaching experience</label>
+                    <select class="experience-select">
+                        <option value="">Select experience</option>
+                        <option>None - First time</option>
+                        <option>1-3 sessions before</option>
+                        <option>Regular coaching experience</option>
+                        <option>Extensive experience</option>
+                    </select>
+                </div>
 
-              <div class="form-group">
-                  <label>Timezone *</label>
-                  <select required>
-                      <option value="">Select timezone</option>
-                      <option>GMT</option>
-                      <option>WAT</option>
-                      <option>EST</option>
-                      <option>PST</option>
-                  </select>
-              </div>
+                <div class="form-group">
+                    <label>How urgent is your need?</label>
+                    <select class="urgency-select">
+                        <option value="">Select urgency</option>
+                        <option>Just exploring options</option>
+                        <option>Ready to start in 2-4 weeks</option>
+                        <option>Want to start within a week</option>
+                        <option>Need immediate assistance</option>
+                    </select>
+                </div>
+            </div>
           </div>
 
-          <div class="form-group full">
-              <label>What are your main goals for coaching?</label>
-              <textarea maxlength="500" placeholder="Tell us what you'd like to achieve..." required></textarea>
+          <div class="form-section">
+            <div class="form-group full">
+                <label>Additional notes or questions</label>
+                <textarea maxlength="500" placeholder="Anything else you'd like us to know? Specific concerns, questions about the process, etc." class="notes-textarea"></textarea>
+                <div class="char-count"><span>0</span>/500 characters</div>
+            </div>
           </div>
 
-          <div class="form-row">
-              <div class="form-group">
-                  <label>Previous coaching experience</label>
-                  <select>
-                      <option value="">Select experience</option>
-                      <option>None</option>
-                      <option>1–2 years</option>
-                      <option>3+ years</option>
-                  </select>
-              </div>
-
-              <div class="form-group">
-                  <label>How urgent is your need?</label>
-                  <select>
-                      <option value="">Select urgency</option>
-                      <option>Not urgent</option>
-                      <option>Medium</option>
-                      <option>Urgent</option>
-                  </select>
-              </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-book">
+              <span class="btn-icon">📅</span>
+              Book My Session
+            </button>
+            <p class="form-note">We'll contact you within 24 hours to confirm your session</p>
           </div>
-
-          <div class="form-group full">
-              <label>Additional notes or questions</label>
-              <textarea maxlength="500" placeholder="Anything else you'd like us to know?"></textarea>
-          </div>
-
-          <button type="submit" class="btn-book">📅 Book My Session</button>
       </form>
     </div>
   </div>
@@ -503,47 +530,134 @@ document.addEventListener('DOMContentLoaded', function() {
   const bookButtons = document.querySelectorAll('.book-consultation-btn');
   const closeModal = document.querySelector('.close-modal');
   const bookingForm = document.querySelector('.booking-form');
-
+  const optionCards = document.querySelectorAll('.option-card');
+  const sessionTypeSelect = document.querySelector('.session-type');
+  const textareas = document.querySelectorAll('textarea');
+  
   // Open modal when any book consultation button is clicked
   bookButtons.forEach(button => {
     button.addEventListener('click', function(e) {
       e.preventDefault();
-      modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      openModal();
     });
   });
 
   // Close modal when X is clicked
-  closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  });
+  closeModal.addEventListener('click', closeModalFunc);
 
   // Close modal when clicking outside the modal content
   modal.addEventListener('click', function(e) {
     if (e.target === modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
+      closeModalFunc();
+    }
+  });
+
+  // Handle option card clicks
+  optionCards.forEach(card => {
+    card.addEventListener('click', function() {
+      const sessionType = this.getAttribute('data-session');
+      sessionTypeSelect.value = sessionType;
+      
+      // Update active state
+      optionCards.forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  // Character count for textareas
+  textareas.forEach(textarea => {
+    const charCount = textarea.parentElement.querySelector('.char-count span');
+    if (charCount) {
+      textarea.addEventListener('input', function() {
+        charCount.textContent = this.value.length;
+      });
     }
   });
 
   // Handle form submission
   bookingForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    // Here you would typically send the form data to your server
-    alert('Thank you for booking your session! We will contact you shortly to confirm your appointment.');
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-    bookingForm.reset();
+    
+    // Basic form validation
+    const requiredFields = bookingForm.querySelectorAll('[required]');
+    let isValid = true;
+    
+    requiredFields.forEach(field => {
+      if (!field.value.trim()) {
+        isValid = false;
+        field.style.borderColor = '#ff4444';
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+    
+    if (!isValid) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    
+    // Simulate form submission
+    const submitBtn = bookingForm.querySelector('.btn-book');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Booking...';
+    submitBtn.disabled = true;
+    
+    setTimeout(() => {
+      alert('Thank you for booking your session! We will contact you within 24 hours to confirm your appointment.');
+      closeModalFunc();
+      bookingForm.reset();
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+      
+      // Reset character counts
+      textareas.forEach(textarea => {
+        const charCount = textarea.parentElement.querySelector('.char-count span');
+        if (charCount) charCount.textContent = '0';
+      });
+    }, 1500);
   });
 
   // Close modal with Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modal.style.display === 'flex') {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModalFunc();
     }
   });
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Set minimum date to today
+    const dateInput = document.querySelector('.date-input');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+
+  function closeModalFunc() {
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    
+    // Reset active option cards
+    optionCards.forEach(card => card.classList.remove('active'));
+  }
+
+  // Touch-friendly improvements for mobile
+  let startY;
+  modal.addEventListener('touchstart', function(e) {
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  modal.addEventListener('touchmove', function(e) {
+    if (!startY) return;
+    
+    const currentY = e.touches[0].clientY;
+    const modalContent = modal.querySelector('.modal-content');
+    
+    if (currentY > startY && modalContent.scrollTop === 0) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 });
 </script>
 
