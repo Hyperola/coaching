@@ -25,6 +25,12 @@ body {
     overflow-x: hidden;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* ===== Navbar ===== */
 .navbar {
     width: 100%;
@@ -176,10 +182,11 @@ body {
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    font-weight: 1000;
+    font-size: 3.5rem;
+    font-weight: 700;
     color: #ffffff;
     line-height: 1.2;
+    margin-bottom: 1.5rem;
 }
 
 .hero h1 span {
@@ -187,8 +194,8 @@ body {
 }
 
 .hero p {
-    font-size: 1.4rem;
-    line-height: 1.4;
+    font-size: 1.3rem;
+    line-height: 1.5;
     margin: 1.5rem 0 2.8rem;
     color: #ffffff;
 }
@@ -223,241 +230,33 @@ body {
     transform: translateY(-2px);
 }
 
-/* ===== About Section ===== */
-.about-section {
-  width: 100%;
-  padding: 6rem 5% 4rem;
-  background: #fff;
+/* ===== Brand Promise Section ===== */
+.brand-promise {
+    padding: 4rem 5%;
+    background: #f8f8f8;
+    text-align: center;
 }
 
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.brand-promise h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-color-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
 }
 
-.about-text {
-  flex: 1 1 500px;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  color: #111;
-  font-weight: 900;
-  margin-bottom: 1.5rem;
-  line-height: 1.4;
-}
-
-.about-text p {
-  color: #444;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
-}
-
-.icon-box {
-  background: #e0f7f4;
-  color: #00bfa5;
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.feature-text h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 0.3rem;
-}
-
-.feature-text p {
-  color: #555;
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-
-.about-image {
-  flex: 2 1 450px;
-  display: flex;
-  justify-content: center;
-}
-
-.image-wrapper {
-  position: relative;
-  border-radius: 12px;
-  overflow: visible;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  width: 100%;
-  max-width: 690px;
-  height: 850px;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-.stats-badge {
-  position: absolute;
-  bottom: -2rem;
-  left: -1.5rem;
-  background: #00bfa5;
-  color: #fff;
-  padding: 1.5rem 1.2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  width: 160px;
-  z-index: 10;
-}
-
-.stats-badge h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.2rem;
-}
-
-.stats-badge p {
-  font-size: 0.9rem;
-  margin: 0;
-  opacity: 0.9;
-}
-
-/* ===== Mobile Responsiveness ===== */
-@media (max-width: 1024px) {
-  .image-wrapper {
-    height: 700px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    padding: 4rem 5% 3rem;
-  }
-  
-  .about-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .about-text {
-    flex: 1 1 100%;
-  }
-  
-  .about-text h2 {
-    font-size: 2rem;
-  }
-  
-  .about-text p {
-    font-size: 1.1rem;
-  }
-  
-  .about-image {
-    flex: 1 1 100%;
-    width: 100%;
-  }
-  
-  .image-wrapper {
-    height: 500px;
-    max-width: 100%;
-  }
-  
-  .stats-badge {
-    bottom: -1.5rem;
-    left: -1rem;
-    padding: 1.2rem 1rem;
-    width: 140px;
-  }
-  
-  .stats-badge h3 {
-    font-size: 1.5rem;
-  }
-  
-  .stats-badge p {
-    font-size: 0.85rem;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-    padding: 3rem 5% 2rem;
-  }
-  
-  .about-text h2 {
-    font-size: 1.8rem;
-  }
-  
-  .about-text p {
-    font-size: 1rem;
-  }
-  
-  .image-wrapper {
-    height: 400px;
-  }
-  
-  .stats-badge {
-    bottom: -1rem;
-    left: -0.5rem;
-    padding: 1rem 0.8rem;
-    width: 120px;
-  }
-  
-  .stats-badge h3 {
-    font-size: 1.3rem;
-  }
-  
-  .stats-badge p {
-    font-size: 0.8rem;
-  }
-  
-  .feature {
-    gap: 0.6rem;
-  }
-  
-  .icon-box {
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .feature-text h4 {
-    font-size: 1.1rem;
-  }
-  
-  .feature-text p {
-    font-size: 0.9rem;
-  }
+.promise-text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* ===== Courses Section ===== */
 .courses-section {
     padding: 80px 5%;
-    background-color: #f8f8f8;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -466,7 +265,11 @@ body {
     margin: 0 auto;
 }
 
-.section-title {
+.section-header {
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -474,12 +277,10 @@ body {
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #666;
-    margin-bottom: 50px;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .course-cards {
@@ -494,13 +295,13 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    max-width: 450px;
+    max-width: 550px;
     text-align: left;
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 550px;
+    min-height: 650px;
     border-top: none;
     margin: 0 auto;
 }
@@ -536,7 +337,7 @@ body {
 }
 
 .course-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 15px;
     color: var(--text-color-dark);
@@ -546,6 +347,7 @@ body {
     margin-bottom: 20px;
     color: #555;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .course-info {
@@ -557,20 +359,20 @@ body {
 }
 
 .course-info span {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #666;
     display: flex;
     align-items: center;
+    font-weight: 500;
 }
 
-.course-content ul {
+.alignment-list {
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     padding-left: 0;
-    flex-grow: 1;
 }
 
-.course-content ul li {
+.alignment-list li {
     font-size: 1rem;
     margin-bottom: 12px;
     color: #444;
@@ -578,16 +380,40 @@ body {
     padding-left: 25px;
 }
 
-.course-content ul li:before {
-    content: "✓";
+.alignment-list li:before {
+    content: "→";
     color: var(--primary-color);
     font-weight: bold;
     position: absolute;
     left: 0;
 }
 
+.included-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.included-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--text-color-dark);
+}
+
+.included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.included-grid span {
+    font-size: 0.95rem;
+    color: #555;
+    padding: 5px 0;
+}
+
 .price {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -629,9 +455,12 @@ body {
 
 .resources-section .subtitle {
     color: #555;
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-bottom: 3rem;
     line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .resources-grid {
@@ -691,7 +520,7 @@ body {
 }
 
 .resource-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #111;
     margin-bottom: 0.3rem;
@@ -700,7 +529,7 @@ body {
 .resource-content .highlight {
     color: #00bfa5;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-bottom: 0.6rem;
 }
 
@@ -717,6 +546,10 @@ body {
     font-size: 0.85rem;
     color: #777;
     margin-bottom: 1rem;
+}
+
+.book-meta i {
+    margin-right: 5px;
 }
 
 .btn.download-btn {
@@ -736,6 +569,164 @@ body {
 
 .btn.download-btn:hover {
     background: #009e8b;
+}
+
+/* ===== About Section ===== */
+.about-section {
+  width: 100%;
+  padding: 6rem 5% 4rem;
+  background: #fff;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #111;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.coach-title {
+  color: #00bfa5;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #00bfa5;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.why-section {
+  margin-top: 2rem;
+}
+
+.why-section h3 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 1.5rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.icon-box {
+  background: #e0f7f4;
+  color: #00bfa5;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.3rem;
+}
+
+.feature-text p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.about-image {
+  flex: 2 1 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 690px;
+  height: 750px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.stats-badge {
+  position: absolute;
+  bottom: -2rem;
+  left: -1.5rem;
+  background: #00bfa5;
+  color: #fff;
+  padding: 1.5rem 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  width: 200px;
+  z-index: 10;
+}
+
+.stats-badge h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.stats-badge p {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+  opacity: 0.9;
+}
+
+.stats-subtitle {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+  opacity: 0.8;
 }
 
 /* ===== Booking Modal Styles ===== */
@@ -1055,20 +1046,31 @@ textarea {
     flex: 1 1 300px;
 }
 
-.footer-logo {
-    font-family: 'Poppins', cursive;
-    font-size: 1.6rem;
+.footer-signature h4 {
+    font-size: 1.4rem;
     font-weight: 700;
     color: #10b981;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.footer-brand p {
+.tagline {
     color: #d1d5db;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-description {
+    color: #9ca3af;
     line-height: 1.6;
     margin-bottom: 20px;
-    max-width: 360px;
     font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 .social-icons a {
@@ -1080,13 +1082,13 @@ textarea {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    margin-right: 10px;
     font-size: 1rem;
     transition: background 0.3s ease;
 }
 
 .social-icons a:hover {
     background-color: #059669;
+    transform: translateY(-2px);
 }
 
 /* Footer Links and Contact Side by Side on Mobile */
@@ -1161,384 +1163,6 @@ textarea {
     text-decoration: underline;
 }
 
-/* ===== Responsive Design ===== */
-@media (max-width: 992px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .features-grid {
-        justify-items: center;
-    }
-
-    .feature {
-        justify-content: center;
-        text-align: left;
-    }
-
-    .about-image {
-        margin-top: 2rem;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 80%;
-        height: calc(100vh - 80px);
-        background: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 50px;
-        gap: 30px;
-        transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
-@media (max-width: 900px) {
-    .booking-container {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .session-options,
-    .booking-form {
-        width: 100%;
-    }
-
-    .session-options {
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding: 25px;
-    }
-
-    .form-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .course-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .course-card {
-        max-width: 100%;
-        min-height: auto;
-    }
-
-    .modal-content {
-        width: 98%;
-        max-height: 95vh;
-    }
-
-    .modal-header {
-        padding: 20px 25px;
-    }
-
-    .booking-form {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .course-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .resource-content {
-        text-align: center;
-    }
-
-    .book-meta {
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    /* Mobile Navigation Updates */
-    .mobile-booking {
-        display: block;
-    }
-
-    .nav-links li a.book-consultation-btn {
-        display: none;
-    }
-
-    .nav-menu {
-        gap: 15px;
-    }
-
-    /* Footer Updates for Mobile - OPTIMIZED */
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        text-align: left;
-    }
-
-    .footer-brand {
-        width: 100%;
-        text-align: center;
-        flex: none;
-    }
-
-    .footer-logo {
-        display: block;
-    }
-
-    .footer-brand p {
-        margin: 0 auto 20px;
-        max-width: 360px;
-    }
-
-    .social-icons {
-        text-align: center;
-        margin-top: 0;
-    }
-
-    .social-icons a {
-        margin: 0 8px;
-    }
-
-    .footer-links-contact {
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-around;
-        align-items: flex-start;
-        gap: 30px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .footer-links,
-    .footer-contact {
-        flex: 1;
-        max-width: 200px;
-        text-align: left;
-        width: auto;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-links h4,
-    .footer-contact h4 {
-        margin-bottom: 15px;
-        font-size: 1.1rem;
-    }
-
-    .footer-bottom {
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .modal-header {
-        padding: 18px 20px;
-    }
-
-    .modal-header h2 {
-        font-size: 1.3rem;
-    }
-
-    .session-options,
-    .booking-form {
-        padding: 20px;
-    }
-
-    .close-modal {
-        width: 35px;
-        height: 35px;
-        font-size: 24px;
-    }
-
-    .logo-text {
-        font-size: 1.3rem;
-    }
-
-    .logo-img {
-        height: 35px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content {
-        margin-top: 80px;
-    }
-
-    .about-text h2 {
-        font-size: 2rem;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    /* Footer adjustments for very small screens */
-    .footer-links-contact {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-    }
-
-    .footer-links,
-    .footer-contact {
-        width: 100%;
-        max-width: 300px;
-        text-align: center;
-    }
-
-    .footer-links ul,
-    .footer-contact ul {
-        text-align: center;
-    }
-
-    .footer-contact ul li i {
-        margin-right: 8px;
-    }
-
-    .footer-brand p {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-    }
-
-    .footer-bottom {
-        margin-top: 15px;
-        padding-top: 10px;
-    }
-
-    .modal-content {
-        margin: 10px;
-        border-radius: 12px;
-    }
-
-    .booking-container {
-        padding: 0;
-    }
-
-    .session-options,
-    .booking-form {
-        padding: 18px;
-    }
-
-    input, select, textarea {
-        padding: 12px 14px;
-    }
-
-    .btn-book {
-        padding: 14px 20px;
-        font-size: 1rem;
-    }
-
-    .form-section h4 {
-        font-size: 1rem;
-    }
-
-    .logo-text {
-        font-size: 1.1rem;
-    }
-
-    .logo-img {
-        height: 30px;
-    }
-
-    /* Mobile Booking Button Adjustments */
-    .mobile-book-btn {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-    }
-}
-
-.logos-img {
-    height: 40px;
-    width: auto;
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-    .service-card:hover,
-    .course-card:hover,
-    .option-card:hover {
-        transform: none;
-    }
-
-    .cta-card-button:hover,
-    .btn:hover,
-    .btn-book:hover:not(:disabled) {
-        transform: none;
-    }
-
-    input:focus, select:focus, textarea:focus {
-        box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.2);
-    }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    :root {
-        --border-color: #000;
-        --text-color-muted: #000;
-    }
-
-    .modal-content {
-        border: 2px solid #000;
-    }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    .modal-content {
-        transform: none;
-    }
-}
-
 /* ===== Chat Widget Styles ===== */
 #chat-widget-container {
     position: fixed;
@@ -1549,9 +1173,9 @@ textarea {
 }
 
 .chat-toggle-btn {
-    width: 56px;
+    width: 150px;
     height: 56px;
-    border-radius: 50%;
+    border-radius: 28px;
     background: #00bfa5;
     color: white;
     border: none;
@@ -1562,11 +1186,22 @@ textarea {
     box-shadow: 0 4px 12px rgba(0, 191, 165, 0.4);
     transition: all 0.3s ease;
     position: relative;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.chat-toggle-btn .chat-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.chat-toggle-btn .chat-text {
+    font-weight: 500;
 }
 
 .chat-toggle-btn:hover {
     background: #009e8b;
-    transform: scale(1.1);
+    transform: scale(1.05);
     box-shadow: 0 6px 16px rgba(0, 191, 165, 0.6);
 }
 
@@ -1585,6 +1220,10 @@ textarea {
     font-size: 12px;
     font-weight: bold;
     border: 2px solid white;
+}
+
+.chat-badge.hidden {
+    display: none;
 }
 
 .chat-window {
@@ -1742,7 +1381,9 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 10px;
+    padding: 16px;
+    background: white;
+    border-top: 1px solid #e0e0e0;
 }
 
 .quick-action-btn {
@@ -1761,32 +1402,449 @@ textarea {
     border-color: #00bfa5;
 }
 
-.typing-indicator {
-    display: flex;
-    gap: 4px;
-    padding: 12px 16px;
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .image-wrapper {
+    height: 650px;
+  }
 }
 
-.typing-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #999;
-    animation: typing 1.4s infinite;
-}
-
-@keyframes typing {
-    0%, 60%, 100% {
-        opacity: 0.5;
-        transform: translateY(0);
+@media (max-width: 992px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
     }
-    30% {
-        opacity: 1;
-        transform: translateY(-10px);
+
+    .features-grid {
+        justify-items: center;
+    }
+
+    .feature {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .about-image {
+        margin-top: 2rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 50px;
+        gap: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media (max-width: 900px) {
+    .booking-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .session-options,
+    .booking-form {
+        width: 100%;
+    }
+
+    .session-options {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 25px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .modal-content {
+        width: 98%;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 20px 25px;
+    }
+
+    .booking-form {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .brand-promise h2 {
+        font-size: 1.8rem;
+    }
+    
+    .promise-text {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .course-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resource-content {
+        text-align: center;
+    }
+
+    .book-meta {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Mobile Navigation Updates */
+    .mobile-booking {
+        display: block;
+    }
+
+    .nav-links li a.book-consultation-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    /* About Section Mobile */
+    .about-section {
+        padding: 4rem 5% 3rem;
+    }
+    
+    .about-text h2 {
+        font-size: 2rem;
+    }
+    
+    .coach-title {
+        font-size: 1.1rem;
+    }
+    
+    .image-wrapper {
+        height: 500px;
+        max-width: 100%;
+    }
+    
+    .stats-badge {
+        bottom: -1.5rem;
+        left: -1rem;
+        padding: 1.2rem 1rem;
+        width: 180px;
+    }
+    
+    .stats-badge h3 {
+        font-size: 1.5rem;
+    }
+    
+    .stats-badge p {
+        font-size: 0.85rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    /* Footer Updates for Mobile - OPTIMIZED */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-brand {
+        width: 100%;
+        text-align: center;
+        flex: none;
+    }
+
+    .footer-signature {
+        display: block;
+    }
+
+    .footer-brand p {
+        margin: 0 auto 20px;
+        max-width: 360px;
+    }
+
+    .social-icons {
+        text-align: center;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        margin: 0 8px;
+    }
+
+    .footer-links-contact {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        max-width: 200px;
+        text-align: left;
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .footer-bottom {
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .modal-header {
+        padding: 18px 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .session-options,
+    .booking-form {
+        padding: 20px;
+    }
+
+    .close-modal {
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+
+    .logo-img {
+        height: 35px;
     }
 }
 
 @media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content {
+        margin-top: 80px;
+    }
+
+    .brand-promise h2 {
+        font-size: 1.5rem;
+    }
+    
+    .promise-text {
+        font-size: 0.9rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .coach-title {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    /* About adjustments for very small screens */
+    .about-section {
+        padding: 3rem 5% 2rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .image-wrapper {
+        height: 400px;
+    }
+    
+    .stats-badge {
+        bottom: -1rem;
+        left: -0.5rem;
+        padding: 1rem 0.8rem;
+        width: 160px;
+    }
+    
+    .stats-badge h3 {
+        font-size: 1.3rem;
+    }
+    
+    .stats-badge p {
+        font-size: 0.8rem;
+    }
+    
+    .feature {
+        gap: 0.6rem;
+    }
+    
+    .icon-box {
+        padding: 0.5rem;
+        font-size: 1rem;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .feature-text h4 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer adjustments for very small screens */
+    .footer-links-contact {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .footer-links,
+    .footer-contact {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .footer-links ul,
+    .footer-contact ul {
+        text-align: center;
+    }
+
+    .footer-contact ul li i {
+        margin-right: 8px;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    .modal-content {
+        margin: 10px;
+        border-radius: 12px;
+    }
+
+    .booking-container {
+        padding: 0;
+    }
+
+    .session-options,
+    .booking-form {
+        padding: 18px;
+    }
+
+    input, select, textarea {
+        padding: 12px 14px;
+    }
+
+    .btn-book {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+
+    .form-section h4 {
+        font-size: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .logo-img {
+        height: 30px;
+    }
+
+    /* Mobile Booking Button Adjustments */
+    .mobile-book-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    /* Chat widget mobile adjustments */
     .chat-window {
         width: calc(100vw - 40px);
         height: 60vh;
@@ -1801,5 +1859,66 @@ textarea {
     .chat-toggle-btn {
         width: 50px;
         height: 50px;
+        border-radius: 50%;
+    }
+    
+    .chat-toggle-btn .chat-text {
+        display: none;
+    }
+    
+    .chat-toggle-btn .chat-icon {
+        margin-right: 0;
+        font-size: 24px;
+    }
+}
+
+.logos-img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .service-card:hover,
+    .course-card:hover,
+    .option-card:hover {
+        transform: none;
+    }
+
+    .cta-card-button:hover,
+    .btn:hover,
+    .btn-book:hover:not(:disabled) {
+        transform: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.2);
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000;
+        --text-color-muted: #000;
+    }
+
+    .modal-content {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .modal-content {
+        transform: none;
     }
 }
